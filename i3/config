@@ -159,6 +159,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status -c $HOME/.config/i3status/i3status.conf
         #status_command i3blocks -c $HOME/.config/i3blocks/i3blocks.conf
+        separator_symbol " "
         position top
         height 25
 }
@@ -166,6 +167,8 @@ bar {
 
 ##open programs in specific workspace
 for_window [class="Brave-browser"] move to workspace $ws2
+for_window [class="code-oss"] move to workspace $ws3
+for_window [class="discord"] move to workspace $ws4
 
 
 #auto launch
@@ -194,3 +197,6 @@ for_window [class="^.*"] border pixel 3
 
 gaps inner 3
 gaps outer 2
+
+# lock i3 using i3lock
+bindsym $mod+Shift+m exec i3lock

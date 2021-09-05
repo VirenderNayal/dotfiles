@@ -23,6 +23,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'mbbill/undotree'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
