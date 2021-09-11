@@ -1,1 +1,1 @@
-zsh theme - dracula
+zsh - powerlevel10k
