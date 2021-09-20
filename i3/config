@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:roboto 10
+font pango:Roboto 10
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
@@ -157,6 +157,19 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    colors {
+            background #2f343f
+            statusline #2f343f
+            separator #4b5262
+
+            # colour                border      background  text
+            focused_workspace       #2f343f     #bf616a     #d8dee8
+            active_workspace        #2f343f     #2f343f     #d8dee8
+            inactive_workspace      #2f343f     #2f343f     #d8dee8
+            urgent_workspacei       #2f343f     #ebcb8b     #2f343f
+        }
+
+        font pango: Roboto, Font Awesome 11
         status_command i3status -c $HOME/.config/i3status/i3status.conf
         #status_command i3blocks -c $HOME/.config/i3blocks/i3blocks.conf
         separator_symbol " "
@@ -166,9 +179,9 @@ bar {
 
 
 ##open programs in specific workspace
+for_window [class="code-oss"] move to workspace $ws1
 for_window [class="Brave-browser"] move to workspace $ws2
-for_window [class="code-oss"] move to workspace $ws3
-for_window [class="discord"] move to workspace $ws4
+for_window [class="discord"] move to workspace $ws3
 
 
 #auto launch
