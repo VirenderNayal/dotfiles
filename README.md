@@ -1,1 +1,1 @@
-zsh - powerlevel10k
+My personal Dotfiles
